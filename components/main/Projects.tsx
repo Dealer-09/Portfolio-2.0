@@ -12,18 +12,18 @@ const Projects = () => {
       </h1>
       <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
         <ProjectCard
-          src="/NextWebsite.png"
-          title="Modern Next.js Portfolio"
+          src="/AIMS 1.0.png"
+          title="Online Tuition Learning Platform"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
         <ProjectCard
-          src="/CardImage.png"
-          title="Interactive Website Cards"
+          src="/PragatiPath.png"
+          title="Farming Learning Platform With Custom AI Toolkit" 
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
         <ProjectCard
-          src="/SpaceWebsite.png"
-          title="Space Themed Website"
+          src="/Codigo.png"
+          title="Competeitive Programming Platform With AI Help Henerator"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
       </div>
