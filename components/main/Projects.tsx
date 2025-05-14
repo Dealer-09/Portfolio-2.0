@@ -23,7 +23,7 @@ const Projects = () => {
         />
         <ProjectCard
           src="/Codigo.png"
-          title="Competeitive Programming Platform With AI Help Henerator"
+          title="Competeitive Programming Platform With AI Help Generator"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
       </div>
