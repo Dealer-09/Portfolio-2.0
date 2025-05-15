@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -15,12 +14,12 @@ const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
+      className="flex flex-col lg:flex-row items-center justify-center px-4 sm:px-8 lg:px-20 mt-10 sm:mt-20 lg:mt-40 w-full z-[20]"
     >
-      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
+      <div className="w-full flex flex-col gap-4 sm:gap-5 justify-center m-auto text-start pt-80 sm:pt-0">
         <motion.div
           variants={slideInFromTop}
-          className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
+          className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9] flex items-center"
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[13px]">
@@ -30,7 +29,7 @@ const HeroContent = () => {
 
         <motion.div
           variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
+          className="flex flex-col gap-4 mt-4 text-3xl sm:text-5xl lg:text-6xl font-bold text-white max-w-full sm:max-w-[600px] w-auto h-auto"
         >
           <span>
             Providing
@@ -38,20 +37,20 @@ const HeroContent = () => {
               {" "}
               the best{" "}
             </span>
-            products exprience
+            products experience
           </span>
         </motion.div>
 
         <motion.p
           variants={slideInFromLeft(0.8)}
-          className="text-lg text-gray-400 my-5 max-w-[600px]"
+          className="text-base sm:text-lg text-gray-400 my-4 sm:my-5 max-w-full sm:max-w-[600px]"
         >
-          I&apos;m Archisman Pal A Full Stack Web Developer,
+          I&apos;m Archisman Pal, a Full Stack Web Developer,
           and aspiring Mechatronics Engineer. Check out my projects and skills.
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}
-          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+          className="py-2 px-4 button-primary text-center text-white cursor-pointer rounded-lg max-w-full sm:max-w-[200px]"
         >
           Learn More!
         </motion.a>
@@ -59,14 +58,17 @@ const HeroContent = () => {
 
       <motion.div
         variants={slideInFromRight(0.8)}
-        className="w-full h-full flex justify-center items-center"
+        className="w-full h-full flex justify-center items-center mt-8 lg:mt-0"
       >
-        <Image
-          src="/mainIconsdark.svg"
-          alt="work icons"
-          height={650}
-          width={650}
-        />
+        <div className="relative w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] lg:w-[650px] lg:h-[650px]">
+          <Image
+            src="/mainIconsdark.svg"
+            alt="work icons"
+            fill
+            className="object-contain"
+            sizes="(max-width: 640px) 250px, (max-width: 1024px) 400px, 650px"
+          />
+        </div>
       </motion.div>
     </motion.div>
   );

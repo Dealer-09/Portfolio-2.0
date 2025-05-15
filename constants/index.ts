@@ -82,15 +82,18 @@ export const Skill_data = [
   export const Socials = [
     {
       name: "Discord",
-      src: "/instagram.svg",
+      src: "/discord.svg",
+      link: "https://discord.gg/YwDuMsz2",
     },
     {
-      name: "Facebook",
-      src: "/facebook.svg",
+      name: "Github",
+      src: "/gitwhite.png",
+      link: "https://github.com/Dealer-09",
     },
     {
       name: "Instagram",
-      src: "/discord.svg",
+      src: "/instagram.svg",
+      link: "https://www.instagram.com/archis__0909/",
     },
   ];    
   
@@ -245,8 +248,7 @@ export const Skill_data = [
       height: 60,
     },
   ];
-  
-  
-  
-  
-  
+
+
+
+
