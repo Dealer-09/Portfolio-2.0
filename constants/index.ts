@@ -73,7 +73,7 @@ export const Skill_data = [
     },
     {
       skill_name: "Git",
-      Image: "/Git.png",
+      Image: "/GIT.png",
       width: 80,
       height: 80,
     },
