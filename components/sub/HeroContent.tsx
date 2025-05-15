@@ -37,7 +37,7 @@ const HeroContent = () => {
               {" "}
               the best{" "}
             </span>
-            products experience
+            product experience
           </span>
         </motion.div>
 
