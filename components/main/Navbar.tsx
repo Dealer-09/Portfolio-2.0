@@ -47,7 +47,9 @@ const Navbar = () => {
       <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[6px] sm:px-[10px]">
         {/* Logo */}
         <a
-          href="#about-me"
+          href="https://alpha-coders.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="h-auto w-auto flex flex-row items-center"
         >
           <Image
