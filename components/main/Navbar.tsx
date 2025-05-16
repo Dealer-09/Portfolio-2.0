@@ -1,10 +1,14 @@
 "use client";
 import { Socials } from "@/constants";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { SpeakerWaveIcon, SpeakerXMarkIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [audioStarted, setAudioStarted] = useState(false);
+  const [audioMuted, setAudioMuted] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   // Automatically close menu on scroll
   useEffect(() => {
@@ -14,8 +18,32 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [menuOpen]);
 
+  const handleToggleAudio = () => {
+    if (audioRef.current) {
+      if (!audioStarted) {
+        audioRef.current.play();
+        setAudioStarted(true);
+        setAudioMuted(false);
+      } else {
+        if (audioMuted) {
+          audioRef.current.muted = false;
+          setAudioMuted(false);
+        } else {
+          audioRef.current.muted = true;
+          setAudioMuted(true);
+        }
+      }
+    }
+  };
+
   return (
     <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-4 sm:px-6 md:px-10">
+      {/* Audio element */}
+      <audio ref={audioRef} loop hidden>
+        <source src="/PortfolioMusic.aac" type="audio/aac" />
+        <source src="/PortfolioMusic.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
       <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[6px] sm:px-[10px]">
         {/* Logo */}
         <a
@@ -49,8 +77,8 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Desktop Socials */}
-        <div className="hidden md:flex flex-row gap-5">
+        {/* Desktop Socials + Speaker Icon */}
+        <div className="hidden md:flex flex-row gap-5 items-center">
           {Socials.map((social) => (
             <a
               href={social.link}
@@ -67,6 +95,17 @@ const Navbar = () => {
               />
             </a>
           ))}
+          <button
+            onClick={handleToggleAudio}
+            className="p-2 rounded-lg transition flex items-center"
+            aria-label={audioMuted || !audioStarted ? "Play Music" : "Mute Music"}
+          >
+            {!audioStarted || audioMuted ? (
+              <SpeakerXMarkIcon className="h-6 w-6 text-gray-300" />
+            ) : (
+              <SpeakerWaveIcon className="h-6 w-6 text-gray-300" />
+            )}
+          </button>
         </div>
 
         {/* Hamburger for Mobile */}
@@ -95,7 +134,7 @@ const Navbar = () => {
               Projects
             </a>
           </div>
-          <div className="flex flex-row gap-5 mt-3 justify-center">
+          <div className="flex flex-row gap-5 mt-3 justify-center items-center">
             {Socials.map((social) => (
               <a
                 href={social.link}
@@ -112,6 +151,17 @@ const Navbar = () => {
                 />
               </a>
             ))}
+            <button
+              onClick={handleToggleAudio}
+              className="p-2 rounded-lg transition flex items-center"
+              aria-label={audioMuted || !audioStarted ? "Play Music" : "Mute Music"}
+            >
+              {!audioStarted || audioMuted ? (
+                <SpeakerXMarkIcon className="h-6 w-6 text-gray-300" />
+              ) : (
+                <SpeakerWaveIcon className="h-6 w-6 text-gray-300" />
+              )}
+            </button>
           </div>
         </div>
       )}
