@@ -13,20 +13,20 @@ const Projects = () => {
       <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
         <ProjectCard
           src="/AIMS 1.0.png"
-          title="Online Tuition Learning Platform"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          title="AIMS 2.0"
+          description="A full-stack educational platform designed to manage academic resources with secure, role-based access."
           link="https://vikashgupta16.github.io/aims/"
         />
         <ProjectCard
           src="/PragatiPath.png"
-          title="Farming Learning Platform With Custom AI Toolkit" 
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          title="PRAGATI PATH" 
+          description="An AI-powered agricultural education platform designed to support Indian farmers with personalized learning, crop guidance, and disease detection."
           link="https://pragatipath.onrender.com/public/LandingPage/index.html"
         />
         <ProjectCard
           src="/Codigo.png"
-          title="Competeitive Programming Platform With AI Help Generator"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          title="Codigo"
+          description="An AI-supported competitive programming platform inspired by HackerRank, designed for beginner training and real-time duels."
           link="https://github.com/Dealer-09/CodeBattle-Arena"
         />
       </div>
