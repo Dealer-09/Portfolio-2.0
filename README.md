@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# 🌐 Portfolio 2.0
 
-First, run the development server:
+A modern, responsive, and animated portfolio website built with **Next.js**, **TypeScript**, and **Tailwind CSS**. Designed to showcase personal branding, projects, and skills in a modular and creative layout.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Features
+
+- ⚡ Built with **Next.js** for server-side rendering and dynamic routing
+- 🎨 Styled using **Tailwind CSS** for rapid UI development and responsive design
+- 🧩 Modular component architecture (Hero, Projects, Skills, Encryption)
+- 🎞️ Smooth transitions and animations with **Framer Motion**
+- 🌌 Visual effects like star backgrounds and creative sections
+- 📱 Mobile-first design and fully responsive across devices
+
+## 📁 Project Structure
+
+```
+/app
+  page.tsx               # Main portfolio layout
+
+/components
+  /main                  # Hero, Projects, Skills, Encryption, Navbar, Footer
+  /sub                   # Reusable elements: ProjectCard, SkillText, DataProvider
+
+/public
+  Assets, backgrounds, icons
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠 Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework:** Next.js (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Animation:** Framer Motion
+- **Hosting (recommended):** Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🚀 Getting Started
 
-## Learn More
+```bash
+git clone https://github.com/yourusername/portfolio-2.0.git
+cd portfolio-2.0
+npm install
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+MIT © 2025 Archisman Pal
