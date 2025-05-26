@@ -12,10 +12,10 @@ const Projects = () => {
       </h1>
       <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
         <ProjectCard
-          src="/AIMS 1.0.png"
+          src="/AIMS 2.0.png"
           title="AIMS 2.0"
           description="A full-stack educational platform designed to manage academic resources with secure, role-based access."
-          link="https://vikashgupta16.github.io/aims/"
+          link="https://aims-2-0-deployment.vercel.app/"
         />
         <ProjectCard
           src="/PragatiPath.png"
