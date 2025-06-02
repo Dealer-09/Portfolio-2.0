@@ -53,14 +53,14 @@ const Navbar = () => {
           className="h-auto w-auto flex flex-row items-center"
         >
           <Image
-            src="/NavLogo.png"
+            src="/Logo.png"
             alt="logo"
             width={50}
             height={50}
             className="cursor-pointer hover:animate-slowspin"
           />
           <span className="font-bold ml-[10px] hidden md:block text-gray-300">
-            Alpha4
+            Alpha Coders
           </span>
         </a>
 
