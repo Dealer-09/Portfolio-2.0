@@ -27,7 +27,7 @@ const Projects = () => {
           src="/Codigo.png"
           title="Codigo"
           description="An AI-supported competitive programming platform inspired by HackerRank, designed for beginner training and real-time duels."
-          link="https://github.com/Dealer-09/CodeBattle-Arena"
+          link="https://codigo-94nz.onrender.com/"
         />
       </div>
     </div>
